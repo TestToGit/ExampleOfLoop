@@ -40,14 +40,11 @@ namespace ExampleOfLoop
 
         static void Main(string[] args)
         {
-           calculation c1 = new calculation(Multiply);
+           calculation c1 = new calculation(Addition);
             c1(10, 20);
-            c1 += Substraction;  
-            Console.WriteLine("Substraction");
-            c1 += Multiply;
-            Console.WriteLine("Multiply");
-            c1 += division;
-            Console.WriteLine("division");
+            Program.Substraction(20, 10);
+            Program.Multiply(10,2);
+            Program.division(10, 2);
 
 
 
