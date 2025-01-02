@@ -13,19 +13,44 @@ using System.Threading.Tasks;
 
 namespace ExampleOfLoop
 {
-    
+    public delegate void display();
+    public delegate void calculation(int Num1 ,  int Num2); 
     class Program
     {
-      public void Add(int Num1,int Num2)
+      public static void Addition(int Num1 , int Num2)
         {
             int result = Num1 + Num2;
-            Console.WriteLine("Add of two Number : " + result);
+            Console .WriteLine(result);
+        }
+        public static void Substraction(int Num1, int Num2)
+        {
+            int result = Num1 - Num2;
+            Console.WriteLine(result);
+        }
+        public static void Multiply(int Num1, int Num2)
+        {
+            int result = Num1 * Num2;
+            Console.WriteLine(result);
+        }
+        public static void division(int Num1, int Num2)
+        {
+            int result = Num1/Num2;
+            Console.WriteLine(result);
         }
 
         static void Main(string[] args)
         {
-          Program p1 = new Program();
-          p1.Add(10, 20);
+           calculation c1 = new calculation(Addition);
+            c1(10, 20);
+            Program.Substraction(20, 10);
+            Program.Multiply(10,2);
+            Program.division(10, 2);
+
+
+
+
+
+
 
             //p1.Add();
             //Program.Add(Id:1,Name:"sarvesh");
