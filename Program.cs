@@ -13,44 +13,57 @@ using System.Threading.Tasks;
 
 namespace ExampleOfLoop
 {
-    public delegate void display();
-    public delegate void calculation(int Num1 ,  int Num2); 
+
     class Program
     {
-      public static void Addition(int Num1 , int Num2)
-        {
-            int result = Num1 + Num2;
-            Console .WriteLine(result);
-        }
-        public static void Substraction(int Num1, int Num2)
-        {
-            int result = Num1 - Num2;
-            Console.WriteLine(result);
-        }
-        public static void Multiply(int Num1, int Num2)
-        {
-            int result = Num1 * Num2;
-            Console.WriteLine(result);
-        }
-        public static void division(int Num1, int Num2)
-        {
-            int result = Num1/Num2;
-            Console.WriteLine(result);
-        }
+        private string EmpName;
+        private int EmpAge;
 
+        public void setEmpName(string Name)
+        {
+            if (string.IsNullOrEmpty(Name) == true)
+            {
+                Console.WriteLine("Name is Empty");
+            }
+            else
+            {
+                this.EmpName = Name;
+            }
+
+        }
+        public void GetEmpName()
+        {
+            Console.WriteLine("Employee Name is : " + this.EmpName);
+        }
+        public void SetEmpAge(int Age)
+        {
+            if (Age < 18)
+            {
+                Console.WriteLine("Age is less than 18");
+            }
+            else
+            {
+                this.EmpAge = Age;
+            }
+        }
+        public void GetEmpAge()
+        {
+            if (EmpAge < 18)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Employee Age is : " + this.EmpAge);
+            }
+        }
         static void Main(string[] args)
         {
-           calculation c1 = new calculation(Addition);
-            c1(10, 20);
-            Program.Substraction(20, 10);
-            Program.Multiply(10,2);
-            Program.division(10, 2);
-
-
-
-
-
-
+            Program p1 = new Program();
+            p1.setEmpName("Sarvesh");
+            p1.GetEmpName();
+            p1.SetEmpAge(20);
+            p1.GetEmpAge();
 
             //p1.Add();
             //Program.Add(Id:1,Name:"sarvesh");
