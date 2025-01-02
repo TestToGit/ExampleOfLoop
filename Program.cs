@@ -62,8 +62,10 @@ namespace ExampleOfLoop
             Program p1 = new Program();
             p1.setEmpName("Sarvesh");
             p1.GetEmpName();
-            p1.SetEmpAge(20);
+            p1.SetEmpAge(25);
             p1.GetEmpAge();
+            Class3 c3 = new Class3();
+            c3.Substract(40, 20);
 
             //p1.Add();
             //Program.Add(Id:1,Name:"sarvesh");
