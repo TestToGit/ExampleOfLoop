@@ -65,7 +65,7 @@ namespace ExampleOfLoop
             p1.SetEmpAge(25);
             p1.GetEmpAge();
             Class3 c3 = new Class3();
-            c3.Substract(40, 20);
+            c3.Substract(50, 20);
 
             //p1.Add();
             //Program.Add(Id:1,Name:"sarvesh");
